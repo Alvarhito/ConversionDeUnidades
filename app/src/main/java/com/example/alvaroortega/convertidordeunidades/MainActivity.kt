@@ -99,8 +99,8 @@ class MainActivity : AppCompatActivity() {
     fun getJson() {
         val random = Random()
         var num = random.nextInt(20 -1)+1
-        var url="https://jsonplaceholder.typicode.com/posts/2"
-        //url+=num
+        var url="https://jsonplaceholder.typicode.com/posts/"
+        url+=num
         //an extension over string (support GET, PUT, POST, DELETE with httpGet(), httpPut(), httpPost(), httpDelete())
         url.httpGet().responseJson{ request, response, result ->
             //do something with response
