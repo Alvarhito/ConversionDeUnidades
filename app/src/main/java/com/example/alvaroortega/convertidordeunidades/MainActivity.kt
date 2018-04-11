@@ -120,18 +120,14 @@ class MainActivity : AppCompatActivity() {
     }
     fun Organizar(info: Json){
         var aux: JSONObject = JSONObject()
+        aux=info.obj()
+        try {
+            var auxi1=aux.getString("title")
+            var auxi2=aux.getString("body")
+            prueba.text=auxi1+": "+auxi2
 
-        while(true){
-            var aux: JSONObject = JSONObject()
-            aux=info.array().getJSONObject(0)
-            try {
-                var auxi1=aux.getString("title")
-                var auxi2=aux.getString("title")
-                prueba.text=auxi1+": "+auxi2
-
-            }catch (e: JSONException){
-                e.printStackTrace()
-            }
+        }catch (e: JSONException){
+            e.printStackTrace()
         }
     }
 }
