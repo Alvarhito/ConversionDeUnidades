@@ -114,12 +114,13 @@ class MainActivity : AppCompatActivity() {
 
                     //
 
-                } 
+                }
             }
         }
     }
     fun Organizar(info: Json){
         var aux: JSONObject = JSONObject()
+        
         aux=info.obj()
         try {
             var auxi1=aux.getString("title")
